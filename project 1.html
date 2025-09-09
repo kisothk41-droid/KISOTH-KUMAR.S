@@ -1,0 +1,223 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" kisoth kumar="width=device-width, initial-scale=1">
+  <title>Kishoth Kumar — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#0560d6;
+      --glass: rgba(255,255,255,0.06);
+      --muted: #98a0b3;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Arial; background: linear-gradient(180deg,#071028 0%, #071427 40%, #0b1626 100%); color:#e6eef8}
+    .container{max-width:1100px;margin:40px auto;padding:28px}
+    header{display:flex;align-items:center;gap:22px}/* profile card */
+.card{display:flex;gap:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:26px;border-radius:16px;box-shadow:0 8px 30px rgba(2,6,23,0.7);align-items:center}
+.avatar{width:200px;height:320px;border-radius:12px;overflow:hidden;flex-shrink:0;border:3px solid rgba(255,255,255,0.06);background:var(--glass);position:relative}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block;filter:contrast(1.02) saturate(1.05)}
+
+.intro{flex:1}
+.intro h1{margin:0;font-size:32px;letter-spacing:0.6px}
+.intro h1 .nameAccent{color:var(--accent)}
+.role{margin:8px 0 18px;color:var(--muted);font-weight:600}
+.bio{color:#cfe3ff;line-height:1.5;margin-bottom:18px}
+
+.actions{display:flex;gap:12px}
+.btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600;backdrop-filter:blur(6px)}
+.btn-primary{background:linear-gradient(90deg,var(--accent),#2aa0ff);color:white;box-shadow:0 6px 18px rgba(5,96,214,0.18)}
+.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+/* sections */
+main{margin-top:22px;display:grid;grid-template-columns:1fr 360px;gap:22px}
+.panel{background:var(--card);padding:18px;border-radius:12px}
+.projects .project{padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);margin-bottom:12px}
+.project h3{margin:0;font-size:16px}
+.project p{margin:6px 0 0;color:var(--muted);font-size:13px}
+
+/* sidebar */
+.sidebar .section-title{font-weight:700;margin-bottom:8px}
+.skills{display:flex;flex-wrap:wrap;gap:8px}
+.skill{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+.contact a{display:block;color:#d6eaff;text-decoration:none;margin-bottom:6px}
+
+footer{text-align:center;color:var(--muted);margin-top:22px;font-size:13px}
+
+/* small devices */
+@media (max-width:900px){
+  main{grid-template-columns:1fr}
+  .avatar{width:140px;height:220px}
+  .container{padding:18px}
+}
+
+/* subtle entrance animation */
+.card, .panel{transform:translateY(10px);opacity:0;animation:enter .6s cubic-bezier(.2,.9,.2,1) forwards}
+.card{animation-delay:0.05s}
+.panel{animation-delay:0.15s}
+@keyframes enter{to{transform:none;opacity:1}}
+
+/* typing effect */
+.typed{display:inline-block; border-right:2px solid rgba(255,255,255,0.18);padding-right:6px;margin-left:6px}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div style="flex:1">
+        <small style="color:var(--muted);font-weight:600">Portfolio</small>
+        <h2 style="margin:6px 0 0;font-size:20px">Kishoth Kumar</h2>
+      </div>
+      <div style="display:flex;gap:12px;align-items:center">
+        <button class="btn btn-ghost" id="themeBtn">Toggle Theme</button>
+        <a class="btn btn-primary" href="#contact">Contact</a>
+      </div>
+    </header><section class="card" aria-label="profile card">
+  <div class="avatar">
+    <!-- Save the uploaded image as "profile.jpg" next to this HTML file -->
+    <img src="C:\Users\pcmkp\Desktop\html.kishore\WhatsApp Image 2025-09-09 at 2.47.45 PM.jpeg" alt="Kishoth Kumar photo" id="profileImg">
+  </div>
+  <div class="intro">
+    <h1>Hi, I'm <span class="nameAccent">Kishoth Kumar</span></h1>
+    <div class="role">Web Developer • UI Enthusiast • Student</div>
+    <div class="bio">I build clean, modern websites and interactive web apps. I enjoy turning ideas into reality with HTML, CSS and JavaScript. Scroll to see my projects, skills and contact details.</div>
+
+    <div class="actions">
+      <a class="btn btn-primary" href="#projects" role="button">View Projects</a>
+      <a class="btn btn-ghost" href="C:\Users\pcmkp\Desktop\html.kishore\project 2.html" download>Download Resume</a>
+    </div>
+  </div>
+</section>
+
+<main>
+  <div>
+    <div class="panel projects" id="projects">
+      <h3 style="margin-top:0">Featured Projects</h3>
+
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>A responsive single-file portfolio built with HTML, CSS and vanilla JS. Theme toggle, smooth scroll and animated elements.</p>
+      </div>
+
+      <div class="project">
+        <h3>ToDo App</h3>
+        <p>A minimalist todo app that demonstrates DOM manipulation, localStorage and accessibility-first patterns.</p>
+      </div>
+
+      <div class="project">
+        <h3>Landing Page Clone</h3>
+        <p>Recreated modern landing pages using CSS Grid, Flexbox and fluid responsive techniques.</p>
+      </div>
+
+    </div>
+
+    <div class="panel" style="margin-top:12px">
+      <h3 style="margin-top:0">About Me</h3>
+      <p style="color:var(--muted)">I'm a BCA student who loves front-end development. I practice building UI components, animations and small web apps. Currently learning advanced JavaScript and performance optimization.</p>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="panel">
+      <div class="section-title">Skills</div>
+      <div class="skills" id="skills">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Responsive Design</div>
+        <div class="skill">Git</div>
+        <div class="skill">Photoshop</div>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-top:12px" id="contact">
+      <div class="section-title">Contact</div>
+      <div class="contact">
+        <a href="mailto:your.email@example.com">k20747016@gmail.com</a>
+        <a href="tel:+911234567890">+91 9894561436</a>
+        <a href="#" id="downloadBtn"></a>
+      </div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  Made with ❤️ • <span id="year"></span> • <span style="color:var(--muted)">Kishoth Kumar</span>
+</footer>
+
+  </div>  <script>
+    // Small JS: theme toggle, typing effect, smooth scroll, vCard download
+    (function(){
+      const root = document.documentElement;
+      const themeBtn = document.getElementById('themeBtn');
+      const yearEl = document.getElementById('year');
+      yearEl.textContent = new Date().getFullYear();
+
+      // theme toggle (simple)
+      let dark = true;
+      themeBtn.addEventListener('click', ()=>{
+        dark = !dark;
+        if(!dark){
+          root.style.setProperty('--bg','#f6f8fb');
+          root.style.setProperty('--card','#ffffff');
+          root.style.setProperty('--accent','#0b6cff');
+          root.style.setProperty('--muted','#4b5563');
+          document.body.style.color = '#041023';
+        } else {
+          root.style.setProperty('--bg','#0f1724');
+          root.style.setProperty('--card','#0b1220');
+          root.style.setProperty('--accent','#0560d6');
+          root.style.setProperty('--muted','#98a0b3');
+          document.body.style.color = '';
+        }
+      });
+
+      // smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(a=>{
+        a.addEventListener('click', function(e){
+          const href = this.getAttribute('href');
+          if(href.length>1){
+            e.preventDefault();
+            document.querySelector(href).scrollIntoView({behavior:'smooth',block:'start'});
+          }
+        });
+      });
+
+      // simple typing effect for role
+      const roleEl = document.querySelector('.role');
+      const roles = ['Web Developer','UI Enthusiast','BCA Student'];
+      let ridx=0;let cidx=0;let forward=true;
+      setInterval(()=>{
+        const full = roles[ridx];
+        if(forward){
+          cidx++;
+          if(cidx>full.length){forward=false;setTimeout(()=>{},400)}
+        } else {cidx--; if(cidx===0){forward=true;ridx=(ridx+1)%roles.length}}
+        roleEl.textContent = full.slice(0,cidx);
+      },120);
+
+      // vCard download
+      document.getElementById('downloadBtn').addEventListener('click', function(e){
+        e.preventDefault();
+        const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:Kumar;Kishoth\nFN:Kishoth Kumar\nTEL;TYPE=CELL:+911234567890\nEMAIL:your.email@example.com\nEND:VCARD`;
+        const blob = new Blob([vcard], {type:'text/vcard'});
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url; a.download = 'kishoth_kumar.vcf'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+      });
+
+      // graceful image fallback if profile.jpg missing
+      const img = document.getElementById('profileImg');
+      img.onerror = function(){
+        img.src = 'data:image/svg+xml;utf8,' + encodeURIComponent(`
+          <svg xmlns="http://www.w3.org/2000/svg" width="400" height="640"><rect width="100%" height="100%" fill="#122033"/><text x="50%" y="50%" fill="#9fb8ff" font-size="28" font-family="Arial" dominant-baseline="middle" text-anchor="middle">Profile Image\nnot found</text></svg>`);
+      }
+
+    })();
+  </script></body>
+</html>
